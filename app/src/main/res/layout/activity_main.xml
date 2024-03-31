@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B19CD9"
+    android:padding="16dp">
+
+    <!-- ScrollView and TextView at the top -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+
+        <!-- TextView for response -->
+        <TextView
+            android:id="@+id/textViewResponse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Response:"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:padding="8dp"/>
+    </ScrollView>
+
+    <!-- TextView for response content -->
+    <TextView
+        android:id="@+id/textViewResponseContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/scrollView"
+        android:layout_marginTop="8dp"
+        android:background="#DDDDDD"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:padding="8dp"
+        android:minLines="3"
+        android:scrollbars="vertical"/>
+
+    <!-- Other components below the TextView for response content -->
+
+    <!-- TextView for prompt -->
+
+    <!-- EditText for prompt -->
+
+    <TextView
+        android:id="@+id/textViewPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewResponseContent"
+        android:layout_marginTop="399dp"
+        android:text="Enter your prompt here"
+        android:textColor="#FFFFFF" />
+
+    <EditText
+        android:id="@+id/editTextPrompt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewPrompt"
+        android:background="@drawable/rounded_edittext_background"
+        android:hint="Enter your prompt here"
+        android:inputType="textMultiLine"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Send Button -->
+    <Button
+        android:id="@+id/buttonSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextPrompt"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="8dp"
+        android:text="Send"
+        android:backgroundTint="#4CAF50"/>
+
+    <!-- Cancel Button -->
+    <Button
+        android:id="@+id/buttonCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextPrompt"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8dp"
+        android:text="Cancel"
+        android:backgroundTint="#FF5722"/>
+
+</RelativeLayout>
